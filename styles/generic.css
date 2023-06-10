@@ -1,0 +1,16 @@
+@layer genericComps {
+  .Button {
+    border: none;
+
+    padding: 0.5em 2em;
+
+    font-size: var(--fs-prmy);
+    font-weight: var(--fw-sec);
+
+    background-color: var(--col-acc-sec);
+    color: var(--col-text-sec);
+    border-radius: var(--border-radius-prmy);
+
+    cursor: pointer;
+  }
+}
