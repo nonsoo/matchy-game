@@ -31,7 +31,7 @@ const Labelled_text_field = ({
   minChar,
 }: Props) => {
   return (
-    <div className={`${styles.LabelTextField} ${exCSS_container}`}>
+    <div className={exCSS_container}>
       <label
         htmlFor={id}
         className={`${styles.LabelTextField_label} ${exCSS_label}`}
