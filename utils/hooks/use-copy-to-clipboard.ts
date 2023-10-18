@@ -15,7 +15,7 @@ const useCopyToClipboard = (
   }, []);
 
   useEffect(() => {
-    let timer: NodeJS.Timer;
+    let timer: NodeJS.Timeout;
     if (result) {
       timer = setTimeout(() => setResult(false), timeOut);
     }

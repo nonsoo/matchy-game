@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./styles.module.css";
+import styles from "@styles/page/game.module.css";
 import { useState, FormEvent } from "react";
 import TextField from "../_generic-components/label-text-field";
 import Btn from "../_generic-components/Btn";
@@ -26,7 +26,7 @@ const Page = () => {
         exCSS_container={styles.textField}
       />
 
-      <Btn name="Submit" exCSS={styles.submit_Btn} />
+      <Btn name="Submit" exCSS={styles.submit_Btn} typeOfBtn="submit" />
     </form>
   );
 };

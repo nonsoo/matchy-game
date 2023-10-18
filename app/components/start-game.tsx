@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../page.module.css";
+import styles from "@styles/components/start-game.module.css";
 import { useState } from "react";
 import useToggle from "@utils/hooks/use-toggle";
 import TextField from "../_generic-components/label-text-field";
