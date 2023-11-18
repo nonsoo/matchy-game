@@ -1,0 +1,22 @@
+.mainWrapper {
+  border: 1px solid black;
+
+  border-radius: 75px;
+  padding: 1em 1.5em;
+
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  background-color: var(--col-acc-four);
+}
+
+.playerName {
+  font-size: var(--fs-prmy);
+}

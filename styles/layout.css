@@ -95,7 +95,7 @@
   }
 
   .mainC {
-    max-width: var(--max-width-prmy);
+    max-width: var(--max-width-sec);
     margin: 0 auto;
     padding: 0 1em;
   }

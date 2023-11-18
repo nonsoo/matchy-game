@@ -1,17 +1,19 @@
 import "@styles/layout.css";
 import styles from "@styles/page/start-game.module.css";
 
-import Text_field_stateless from "../components/generic-components/text-field-stateless";
+import Text_field_stateless from "@components/generic-components/text-field-stateless";
+import Header from "@components/header";
 
 export default function Home() {
   return (
     <>
-      {" "}
-      <header className={`mainC ${styles.header}`}>
-        <p className={styles.header_title}>matchymatchy.tv</p>
-      </header>
+      <Header />
       <main className="mainC">
         <form className={styles.start_game_form}>
+          <button className={styles.create_roomBtn} type="button">
+            Create a room
+          </button>
+          <p className={styles.formSplitter}>other options</p>
           <Text_field_stateless
             labelID="room-id"
             labelName="Room ID"

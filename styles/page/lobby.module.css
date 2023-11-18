@@ -1,0 +1,52 @@
+.mainWrapper {
+  margin-top: 3em;
+}
+
+.lobby_stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  margin-bottom: 1em;
+
+  font-size: var(--fs-sm-prmy);
+}
+
+.roomID {
+  text-align: center;
+  border: 2px solid var(--col-acc-four);
+  padding: 1em;
+
+  font-size: var(--fs-sm-prmy);
+}
+
+.roomID_id {
+  font-weight: var(--fw-tri);
+  text-transform: uppercase;
+}
+
+.joinedPlayers {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  justify-content: center;
+  gap: 1em;
+}
+
+.startGame_btn {
+  border: none;
+
+  padding: 0.5em 2em;
+  margin: 2em 0;
+
+  font-size: var(--fs-prmy);
+  font-weight: var(--fw-sec);
+
+  background-color: var(--col-acc-sec);
+  color: var(--col-text-sec);
+  border-radius: var(--border-radius-prmy);
+
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
+}

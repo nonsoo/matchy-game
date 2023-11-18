@@ -23,24 +23,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2em;
-}
-
-.inputField_label {
-  font-weight: var(--fw-tri);
-  font-size: var(--fs-sm-prmy);
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.inputField_text {
-  padding: 0.5em;
-  font-size: var(--fs-sm-prmy);
-  width: 100%;
-
-  border: none;
-  border: 2px solid var(--col-acc-four);
-  border-radius: 3px;
+  gap: 1.25em;
 }
 
 .startGame_btn {
@@ -56,9 +39,62 @@
   border-radius: var(--border-radius-prmy);
 
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 90%;
   align-self: center;
+}
+
+.create_roomBtn {
+  border: none;
+
+  padding: 0.5em 1.25em;
+
+  font-size: var(--fs-sm-prmy);
+  font-weight: var(--fw-sec);
+
+  background-color: var(--col-acc-sec);
+  color: var(--col-text-sec);
+  border-radius: var(--border-radius-prmy);
+
+  cursor: pointer;
+  width: 100%;
+
+  align-self: flex-end;
+}
+
+.formSplitter {
+  align-self: center;
+
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--fs-sm-prmy);
+  font-weight: var(--fw-tri);
+
+  margin-bottom: 1em;
+  position: relative;
+
+  width: 100%;
+}
+
+.formSplitter::before {
+  content: "";
+  display: inline-block;
+  border-radius: 1px;
+  height: 3px;
+  width: 30%;
+  background-color: var(--col-acc-four);
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.formSplitter::after {
+  content: "";
+  display: inline-block;
+  border-radius: 1px;
+  height: 3px;
+  width: 30%;
+  background-color: var(--col-acc-four);
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
