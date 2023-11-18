@@ -1,9 +1,6 @@
 @layer resets, base, genericComps;
 
 :root {
-  /* FONTS */
-  --ff-prmy: "Nunito", sans-serif;
-
   --fs-sm-prmy: 0.75rem;
   --fs-sm-sec: 0.75rem;
   --fs-prmy: 1rem;

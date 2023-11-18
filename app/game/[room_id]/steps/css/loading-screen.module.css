@@ -1,0 +1,32 @@
+.mainWrapper {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainWrapper p {
+  font-size: var(--fs-four);
+  font-weight: var(--fw-tri);
+  text-align: center;
+}
+
+.mainWrapper p:nth-child(3) {
+  background-color: var(--col-acc-four);
+  border-radius: var(--border-radius-prmy);
+  font-size: var(--fs-sm-prmy);
+  padding: 0.75em;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+}
+
+.players section:nth-child(1) {
+  align-self: flex-start;
+}
+
+.players section:nth-child(2) {
+  align-self: flex-end;
+}

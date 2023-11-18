@@ -20,3 +20,18 @@
 .playerName {
   font-size: var(--fs-prmy);
 }
+
+.loading_name {
+  width: 6rem;
+  height: 15px;
+  background-color: var(--col-acc-four);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  border-radius: var(--border-radius-sec);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}

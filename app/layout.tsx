@@ -1,7 +1,5 @@
 import "@styles/layout.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { sansita } from "@utils/constants/fonts";
 
 export const metadata = {
   title: "Matchy Matchy -- The word association game with friends",
@@ -15,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sansita.className}>{children}</body>
     </html>
   );
 }
