@@ -1,0 +1,64 @@
+.header {
+  padding: 1em;
+  margin-top: 2em;
+
+  border-radius: var(--border-radius-prmy);
+  background-color: var(--col-background-sec);
+  box-shadow: var(--box-shadow);
+}
+
+.header_title {
+  text-align: center;
+  font-size: var(--fs-prmy);
+
+  font-weight: var(--fw-tri);
+
+  cursor: default;
+  user-select: none;
+}
+
+.start_game_form {
+  max-width: 400px;
+  margin: 2em auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.inputField_label {
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-sm-prmy);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.inputField_text {
+  padding: 0.5em;
+  font-size: var(--fs-sm-prmy);
+  width: 100%;
+
+  border: none;
+  border: 2px solid var(--col-acc-four);
+  border-radius: 3px;
+}
+
+.startGame_btn {
+  border: none;
+
+  padding: 0.5em 2em;
+
+  font-size: var(--fs-prmy);
+  font-weight: var(--fw-sec);
+
+  background-color: var(--col-acc-sec);
+  color: var(--col-text-sec);
+  border-radius: var(--border-radius-prmy);
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  align-self: center;
+}

@@ -1,5 +1,4 @@
 import "@styles/layout.css";
-import styles from "@styles/page/game.module.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,12 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className={`mainC ${styles.header}`}>
-          <p className={styles.header_title}>matchymatchy.tv</p>
-        </header>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -8,9 +8,6 @@ interface Props {
   labelName: string;
   textState: string;
   setTextState: Dispatch<SetStateAction<string>>;
-  exCSS_container?: string;
-  exCSS_label?: string;
-  exCSS_input?: string;
   required?: boolean;
   maxChar?: number;
   minChar?: number;
@@ -23,25 +20,19 @@ const Labelled_text_field = ({
   labelName,
   textState,
   setTextState,
-  exCSS_container,
-  exCSS_label,
-  exCSS_input,
   required = false,
   maxChar,
   minChar,
 }: Props) => {
   return (
-    <div className={exCSS_container}>
-      <label
-        htmlFor={id}
-        className={`${styles.LabelTextField_label} ${exCSS_label}`}
-      >
+    <section className={styles.inputField}>
+      <label htmlFor={id} className={styles.inputField_label}>
         {labelName}
       </label>
       <input
         type={type}
         id={id}
-        className={`${styles.LabelTextField_input} ${exCSS_input}`}
+        className={styles.inputField_text}
         onChange={(e) => setTextState(e.target.value)}
         value={textState}
         placeholder={placeHolder_text}
@@ -49,7 +40,7 @@ const Labelled_text_field = ({
         maxLength={maxChar}
         minLength={minChar}
       />
-    </div>
+    </section>
   );
 };
 
