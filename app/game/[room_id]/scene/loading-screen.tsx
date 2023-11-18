@@ -1,5 +1,5 @@
 "use client";
-import styles from "./css/loading-screen.module.css";
+import styles from "./styles/loading-screen.module.css";
 import { useEffect } from "react";
 
 import useToggle from "@utils/hooks/use-toggle";

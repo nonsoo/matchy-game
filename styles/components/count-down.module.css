@@ -1,0 +1,30 @@
+.mainWrapper {
+  container-name: countdown;
+  container-type: inline-size;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.outerBar {
+  width: 200px;
+  height: 20px;
+  background-color: var(--col-acc-four);
+  overflow: hidden;
+}
+
+.innerBar {
+  width: 200px;
+  height: 20px;
+  background-color: var(--col-acc-prmy);
+  transition: translate 0.5s ease-in-out;
+}
+
+@container countdown (width>=25rem) {
+  .countdown {
+    flex-direction: row;
+  }
+}

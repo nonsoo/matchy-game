@@ -1,0 +1,20 @@
+.statsWrapper {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (width>=56rem) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.word {
+  padding: 3em;
+  border-radius: var(--border-radius-prmy);
+
+  background-color: var(--col-acc-four);
+  text-align: center;
+
+  font-size: var(--fs-four);
+}

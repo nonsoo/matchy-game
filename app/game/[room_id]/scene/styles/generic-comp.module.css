@@ -1,0 +1,9 @@
+.first_word_loader {
+  padding: 3em;
+  border-radius: var(--border-radius-prmy);
+
+  background-color: var(--col-acc-four);
+  text-align: center;
+
+  font-size: var(--fs-four);
+}

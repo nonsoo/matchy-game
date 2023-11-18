@@ -1,5 +1,10 @@
 @layer components {
   /* Text field */
+  .inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
 
   .inputField_label {
     font-weight: var(--fw-tri);
@@ -23,14 +28,5 @@
       background-color: var(--col-background-prmy);
       color: var(--col-text-prmy);
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
