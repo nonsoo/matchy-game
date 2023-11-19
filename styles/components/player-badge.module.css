@@ -7,6 +7,7 @@
   display: flex;
   gap: 1em;
   align-items: center;
+  max-width: max-content;
 }
 
 .circle {

@@ -3,6 +3,10 @@
   container-type: inline-size;
 }
 
+.countdown__title {
+  font-size: var(--fs-sm-prmy);
+}
+
 .countdown {
   display: flex;
   flex-direction: column;

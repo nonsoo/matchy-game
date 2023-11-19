@@ -1,12 +1,11 @@
 .mainWrapper {
   display: flex;
-  gap: 0.75em;
-  justify-content: center;
+  gap: 0.5em;
+  justify-content: flex-start;
 }
 
 .circles {
   display: flex;
-
   gap: 1em;
 }
 

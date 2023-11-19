@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
 
-  @media (width>=56rem) {
+  /* @media (width>=56rem) {
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
 }
 
 .word {

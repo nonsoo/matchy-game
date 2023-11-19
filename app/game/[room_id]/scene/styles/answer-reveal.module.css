@@ -1,0 +1,48 @@
+.word {
+  padding: 3em;
+  border-radius: var(--border-radius-prmy);
+
+  background-color: var(--col-acc-four);
+  text-align: center;
+
+  font-size: var(--fs-four);
+}
+
+.notMatched_message {
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-sec);
+}
+
+.guessedWords {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+
+  position: relative;
+}
+
+.guessedWords > p {
+  width: 50%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.guessedWords > p:first-child {
+  align-self: flex-start;
+  translate: 50px 0;
+}
+
+.guessedWords > p:last-child {
+  align-self: flex-end;
+  translate: -50px 0;
+}
+
+.guessedWords_icon {
+  align-self: center;
+  position: absolute;
+  top: 110px;
+
+  font-size: 3em;
+}

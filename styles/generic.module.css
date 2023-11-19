@@ -23,6 +23,14 @@
     border-radius: 3px;
   }
 
+  .guessedWord {
+    padding: 1em;
+    border-radius: var(--border-radius-prmy);
+    background-color: var(--col-acc-four);
+    font-size: var(--fs-sm-prmy);
+    font-weight: var(--fw-sec);
+  }
+
   @media (prefers-color-scheme: dark) {
     .inputField_text {
       background-color: var(--col-background-prmy);
