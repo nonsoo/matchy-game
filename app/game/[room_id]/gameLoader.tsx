@@ -9,6 +9,7 @@ import Guess_word from "./scene/guess-word";
 import Answer_reveal from "./scene/answer-reveal";
 import EndofTurn from "./scene/end-of-turn";
 import Points_tally from "./scene/points-tally";
+import EndofRound from "./scene/end-of-round";
 
 import useGameContext from "@utils/hooks/use-game-context";
 
@@ -32,6 +33,7 @@ const Game = () => {
       )}
       {gameState.scene === 5 && <EndofTurn />}
       {gameState.scene === 6 && <Points_tally />}
+      {gameState.scene === 7 && <EndofRound />}
     </main>
   );
 };
