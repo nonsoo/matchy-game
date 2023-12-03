@@ -1,5 +1,4 @@
 import useGameContext from "@utils/hooks/use-game-context";
-import { useMemo } from "react";
 
 import Player_badge from "@components/player-badge";
 import styles from "./styles/points-tally.module.css";

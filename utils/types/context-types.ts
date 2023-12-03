@@ -4,6 +4,7 @@ export interface gameContext {
   gameState: {
     turns_remaining: number;
     scene: number;
+    round: "One" | "Two" | "Three";
     player_1: {
       name: string;
       points: number;

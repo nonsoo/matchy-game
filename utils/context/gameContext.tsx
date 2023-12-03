@@ -10,6 +10,7 @@ export const GameContext = createContext<gameContext>({
   gameState: {
     is_matched: false,
     scene: 1,
+    round: "One",
     turns_remaining: 5,
     player_1: {
       name: "",
@@ -26,7 +27,7 @@ const GameProvider = ({ children }: Props) => {
     is_matched: false,
     scene: 6,
     turns_remaining: 5,
-
+    round: "One",
     player_1: {
       name: "Lydia",
       points: 0,
