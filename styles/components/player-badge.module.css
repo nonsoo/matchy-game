@@ -10,6 +10,19 @@
   max-width: max-content;
 }
 
+.mainWrapper[data-is_leaderboard="true"] {
+  position: relative;
+}
+
+.crown {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  rotate: 20deg;
+
+  font-size: 1.75em;
+}
+
 .circle {
   width: 25px;
   height: 25px;
