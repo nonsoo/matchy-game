@@ -5,9 +5,10 @@ import styles from "@styles/page/game.module.css";
 
 import Loading_screen from "./scene/loading-screen";
 import First_word_loader from "./scene/first-word-loader";
-
 import Guess_word from "./scene/guess-word";
 import Answer_reveal from "./scene/answer-reveal";
+import EndofTurn from "./scene/end-of-turn";
+import Points_tally from "./scene/points-tally";
 
 import useGameContext from "@utils/hooks/use-game-context";
 
@@ -29,6 +30,8 @@ const Game = () => {
           playerPoints_2={gameState.player_2.points}
         />
       )}
+      {gameState.scene === 5 && <EndofTurn />}
+      {gameState.scene === 6 && <Points_tally />}
     </main>
   );
 };

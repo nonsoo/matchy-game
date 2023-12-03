@@ -1,0 +1,49 @@
+.Title {
+  font-size: var(--fs-four);
+  font-weight: var(--fw-tri);
+  text-align: center;
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.pointsTally_wrapper {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.pointContainer {
+  padding: 1em;
+  border-radius: 75px;
+  background-color: var(--col-acc-four);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.pointContainer > p {
+  border-radius: 75px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.5em 1em;
+  font-size: var(--fs-sm-prmy);
+}
+
+.pointContainer > p:nth-child(2) {
+  border-radius: 0px;
+  background-color: initial;
+  border: none;
+  padding: 0.5em;
+}
+
+.tally_message {
+  text-align: center;
+  margin-top: 2em;
+
+  font-size: var(--fs-tri);
+}
