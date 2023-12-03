@@ -46,3 +46,10 @@
 
   font-size: 3em;
 }
+
+.mainWrapper_mini > section:last-child {
+  position: absolute;
+
+  right: 0;
+  color: blue;
+}

@@ -1,29 +1,33 @@
-import {
-  createContext,
-  ReactNode,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from "react";
+import { createContext, ReactNode, useState } from "react";
 
-interface gameContext {
-  turns_remaining: number;
-  set_turns_remaining: Dispatch<SetStateAction<number>>;
-}
+import type { gameContext, gameState } from "@utils/types/context-types";
 
 interface Props {
   children: ReactNode;
 }
 
 export const GameContext = createContext<gameContext>({
-  turns_remaining: 5,
-  set_turns_remaining: () => {},
+  gameState: {
+    is_matched: false,
+    scene: 4,
+    turns_remaining: 5,
+    player_1: { name: "", points: 0 },
+    player_2: { name: "", points: 0 },
+  },
+  setGameState: () => {},
 });
 
 const GameProvider = ({ children }: Props) => {
-  const [turns_remaining, set_turns_remaining] = useState(5);
+  const [gameState, setGameState] = useState<gameState>({
+    is_matched: false,
+    scene: 4,
+    turns_remaining: 5,
+    player_1: { name: "Lydia", points: 0 },
+    player_2: { name: "Nonso", points: 0 },
+  });
+
   return (
-    <GameContext.Provider value={{ turns_remaining, set_turns_remaining }}>
+    <GameContext.Provider value={{ gameState, setGameState }}>
       {children}
     </GameContext.Provider>
   );
