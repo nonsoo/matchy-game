@@ -1,6 +1,10 @@
 import { createContext, ReactNode, useState } from "react";
 
-import type { gameContext, gameState } from "@utils/types/context-types";
+import type {
+  gameContext,
+  gameState,
+  pairState,
+} from "@utils/types/context-types";
 
 interface Props {
   children: ReactNode;
@@ -8,9 +12,12 @@ interface Props {
 
 export const GameContext = createContext<gameContext>({
   gameState: {
-    is_matched: false,
     scene: 1,
     round: "One",
+    players: [],
+  },
+  pairState: {
+    is_matched: false,
     turns_remaining: 5,
     player_1: {
       name: "",
@@ -20,14 +27,13 @@ export const GameContext = createContext<gameContext>({
     player_2: { name: "", points: 0, guesses: [] },
   },
   setGameState: () => {},
+  setPairState: () => {},
 });
 
 const GameProvider = ({ children }: Props) => {
-  const [gameState, setGameState] = useState<gameState>({
+  const [pairState, setPairState] = useState<pairState>({
     is_matched: false,
-    scene: 6,
     turns_remaining: 5,
-    round: "One",
     player_1: {
       name: "Lydia",
       points: 0,
@@ -48,8 +54,16 @@ const GameProvider = ({ children }: Props) => {
     },
   });
 
+  const [gameState, setGameState] = useState<gameState>({
+    scene: 8,
+    round: "One",
+    players: [],
+  });
+
   return (
-    <GameContext.Provider value={{ gameState, setGameState }}>
+    <GameContext.Provider
+      value={{ gameState, pairState, setPairState, setGameState }}
+    >
       {children}
     </GameContext.Provider>
   );

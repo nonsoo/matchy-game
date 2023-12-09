@@ -2,9 +2,12 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface gameContext {
   gameState: {
-    turns_remaining: number;
     scene: number;
     round: "One" | "Two" | "Three";
+    players: Array<{ name: string; points: number }>;
+  };
+  pairState: {
+    turns_remaining: number;
     player_1: {
       name: string;
       points: number;
@@ -26,6 +29,8 @@ export interface gameContext {
     is_matched: boolean;
   };
   setGameState: Dispatch<SetStateAction<gameState>>;
+  setPairState: Dispatch<SetStateAction<pairState>>;
 }
 
 export type gameState = gameContext["gameState"];
+export type pairState = gameContext["pairState"];

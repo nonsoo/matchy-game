@@ -10,11 +10,12 @@ import Answer_reveal from "./scene/answer-reveal";
 import EndofTurn from "./scene/end-of-turn";
 import Points_tally from "./scene/points-tally";
 import EndofRound from "./scene/end-of-round";
+import LeaderBoard from "./scene/leaderboard";
 
 import useGameContext from "@utils/hooks/use-game-context";
 
 const Game = () => {
-  const { gameState } = useGameContext();
+  const { gameState, pairState } = useGameContext();
   return (
     <main className={`mainC ${styles.mainWrapper}`}>
       {gameState.scene === 1 && (
@@ -24,16 +25,17 @@ const Game = () => {
       {gameState.scene === 3 && <Guess_word />}
       {gameState.scene === 4 && (
         <Answer_reveal
-          isMatched={gameState.is_matched}
-          playerName_1={gameState.player_1.name}
-          playerName_2={gameState.player_2.name}
-          playerPoint_1={gameState.player_1.points}
-          playerPoints_2={gameState.player_2.points}
+          isMatched={pairState.is_matched}
+          playerName_1={pairState.player_1.name}
+          playerName_2={pairState.player_2.name}
+          playerPoint_1={pairState.player_1.points}
+          playerPoints_2={pairState.player_2.points}
         />
       )}
       {gameState.scene === 5 && <EndofTurn />}
       {gameState.scene === 6 && <Points_tally />}
       {gameState.scene === 7 && <EndofRound />}
+      {gameState.scene === 8 && <LeaderBoard />}
     </main>
   );
 };
