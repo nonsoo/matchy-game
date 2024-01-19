@@ -8,8 +8,13 @@ import Player_badge from "@components/player-badge";
 interface Props {
   name_1: string;
   name_2: string;
+  matched_words: Array<{
+    word: string;
+    is_matched: boolean;
+    matchy_word: string;
+  }>;
 }
-const matchy_besties = ({ name_1, name_2 }: Props) => {
+const matchy_besties = ({ name_1, name_2, matched_words }: Props) => {
   return (
     <div className={styles.mainDiv}>
       <div className={styles.secDiv}>
@@ -20,10 +25,14 @@ const matchy_besties = ({ name_1, name_2 }: Props) => {
           <Player_badge name={name_1} />
           <Player_badge name={name_2} />
         </div>
-        <p className={styles.subTitle}>Matching words:</p>
-        <div className={styles.playground}>Playground</div>
-        <div className={styles.playground}>Playground</div>
-        <div className={styles.playground}>Playground</div>
+        <p className={styles.subTitle}>
+          Matching words: {matched_words.length}
+        </p>
+        {matched_words.map((matched_word) => (
+          <div key={matched_word.matchy_word} className={styles.playground}>
+            {matched_word.word}
+          </div>
+        ))}
       </div>
       <AiOutlineEllipsis className={styles.ellipsis} />
 

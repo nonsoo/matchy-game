@@ -41,6 +41,7 @@ const Game = () => {
         <Matchy_besties
           name_1={pairState.player_1.name}
           name_2={pairState.player_2.name}
+          matched_words={pairState.player_1.guesses}
         />
       )}
     </main>
