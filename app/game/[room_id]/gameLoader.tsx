@@ -35,7 +35,7 @@ const Game = () => {
       {gameState.scene === 5 && <EndofTurn />}
       {gameState.scene === 6 && <Points_tally />}
       {gameState.scene === 7 && <EndofRound />}
-      {gameState.scene === 8 && <LeaderBoard />}
+      {gameState.scene === 30 && <LeaderBoard />}
     </main>
   );
 };
