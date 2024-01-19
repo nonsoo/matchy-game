@@ -1,10 +1,9 @@
 .mainDiv {
-  background-color: white;
+  background-color: var(--col-background-prmy);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
   padding: 100px 0;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .players {
-  color: black;
+  color: #000000;
   font-size: 10px;
   display: flex;
   gap: 20px;
@@ -43,8 +42,8 @@
 }
 
 .playground {
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: var(--col-background-tri);
   width: 300px;
   height: 50px;
   text-align: center;
@@ -54,12 +53,12 @@
 }
 
 .ellipsis {
-  color: black;
+  color: #000000;
   font-size: 100px;
 }
 
 .shareBtn {
-  color: black;
+  color: #000000;
   background-color: #d7d7d7;
   border-radius: 10px;
   height: 60px;
@@ -70,8 +69,8 @@
 }
 
 .leaderboardBtn {
-  color: black;
-  background-color: #f7f6f6;
+  color: #000000;
+  background-color: var(--col--background-sec);
   border-radius: 10px;
   height: 60px;
   width: 300px;
