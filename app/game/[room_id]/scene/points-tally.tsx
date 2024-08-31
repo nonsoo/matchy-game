@@ -4,9 +4,9 @@ import Player_badge from "@components/player-badge";
 import styles from "./styles/points-tally.module.css";
 
 const Points_tally = () => {
-  const { gameState } = useGameContext();
+  const { pairState } = useGameContext();
 
-  const number_of_matched_words = gameState.player_1.guesses.filter(
+  const number_of_matched_words = pairState.player_1.guesses.filter(
     (guess) => guess.is_matched === true
   );
   return (
@@ -14,21 +14,21 @@ const Points_tally = () => {
       <p className={styles.Title}>Your Matches</p>
       <section className={styles.players}>
         <Player_badge
-          name={gameState.player_1.name}
-          variant={{ variant: "point", point: gameState.player_1.points }}
+          name={pairState.player_1.name}
+          variant={{ variant: "point", point: pairState.player_1.points }}
         />
         <Player_badge
-          name={gameState.player_2.name}
-          variant={{ variant: "point", point: gameState.player_2.points }}
+          name={pairState.player_2.name}
+          variant={{ variant: "point", point: pairState.player_2.points }}
         />
       </section>
 
       <section className={styles.pointsTally_wrapper}>
-        {gameState.player_1.guesses.map((guess, index) => (
+        {pairState.player_1.guesses.map((guess, index) => (
           <div className={styles.pointContainer} key={index}>
             <p>{guess.word}</p>
             <p>{guess.matchy_word}</p>
-            <p>{gameState.player_2.guesses[index].word}</p>
+            <p>{pairState.player_2.guesses[index].word}</p>
           </div>
         ))}
       </section>

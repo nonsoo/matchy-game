@@ -55,7 +55,7 @@ const GameProvider = ({ children }: Props) => {
   });
 
   const [gameState, setGameState] = useState<gameState>({
-    scene: 100,
+    scene: 7,
     round: "One",
     players: [],
   });
@@ -64,6 +64,20 @@ const GameProvider = ({ children }: Props) => {
     <GameContext.Provider
       value={{ gameState, pairState, setPairState, setGameState }}
     >
+      <button
+        onClick={() =>
+          setGameState((prev) => ({ ...prev, scene: prev.scene + 1 }))
+        }
+      >
+        Next Scene
+      </button>
+      <button
+        onClick={() =>
+          setGameState((prev) => ({ ...prev, scene: prev.scene - 1 }))
+        }
+      >
+        Previous Scene
+      </button>
       {children}
     </GameContext.Provider>
   );

@@ -36,8 +36,8 @@ const Game = () => {
       {gameState.scene === 5 && <EndofTurn />}
       {gameState.scene === 6 && <Points_tally />}
       {gameState.scene === 7 && <EndofRound />}
-      {gameState.scene === 30 && <LeaderBoard />}
-      {gameState.scene === 100 && (
+      {gameState.scene === 8 && <LeaderBoard />}
+      {gameState.scene === 9 && (
         <Matchy_besties
           name_1={pairState.player_1.name}
           name_2={pairState.player_2.name}
